@@ -1,34 +1,49 @@
-/* MovieGrid.css */
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.movie-card {
-  background-color: #f0f0f0;
-  border-radius: 8px;
+ /* Style for the movie card container */
+.movie-item {
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for a card effect */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-.movie-card img {
+/* Style for the movie poster */
+.movie-poster {
   width: 100%;
   height: auto;
+  border-radius: 8px 8px 0 0; /* Rounded top corners for the poster */
+  transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
 
-.movie-card h3 {
-  margin: 10px;
-  font-size: 1.2em;
+/* Style for the movie title */
+.movie-title {
+  padding: 12px 10px; /* Added extra padding for a more spacious title */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  width: 100%;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners for the title */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-.movie-card p {
-  margin: 10px;
-  color: #666;
+/* Hover effect for the movie item */
+.movie-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Hover effect for the poster */
+.movie-item:hover .movie-poster {
+  transform: scale(1.05); /* Zoom-in effect when hovering over the image */
+}
+
+/* Hover effect for the movie title */
+.movie-item:hover .movie-title {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the background of the title */
 }

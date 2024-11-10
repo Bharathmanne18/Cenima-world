@@ -1,0 +1,30 @@
+.movie-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-trailer iframe {
+  width: 100%;
+  height: 315px;
+}
+
+.movie-list img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.movie-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-list li {
+  margin: 15px 0;
+}

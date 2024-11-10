@@ -1,0 +1,68 @@
+ /* src/App.css */
+
+.app-layout {
+    display: flex; /* Flexbox layout to arrange Sidebar, Header, and Content */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.header {
+    height: 60px; /* Height for your header */
+    background-color: #3f51b5; /* Header background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000; /* Ensure header is on top */
+    position: fixed; /* Fix header at the top */
+    width: 100%; /* Full width */
+}
+
+.sidebar {
+    width: 240px; /* Fixed width for the sidebar */
+    background-color: #3f51b5; /* Match sidebar color */
+    color: white; /* Sidebar text color */
+    height: calc(100vh - 60px); /* Full height minus the header */
+    position: fixed; /* Keep sidebar fixed */
+    top: 60px; /* Position just below the header */
+    left: 0; /* Align to the left */
+    overflow-y: auto; /* Enable scrolling if sidebar content overflows */
+}
+
+.content-area {
+    flex-grow: 1; /* Take remaining space */
+    margin-left: 240px; /* Offset for the sidebar width */
+    margin-top: 60px; /* Space for the header */
+    padding: 20px; /* Space around content */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between movie cards */
+}
+
+.movie-card {
+    width: calc(20% - 16px); /* Adjust to show 5 cards per row */
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center; /* Center text */
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.movie-poster {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+/* Modal and other styles can be added here */
